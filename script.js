@@ -1,59 +1,52 @@
-// Manejo del formulario de contacto
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Obtener los valores del formulario
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // Validar el formulario
-    if (!name || !email || !message) {
-        alert('Por favor, complete todos los campos');
-        return;
-    }
-    
-    // Validar el formato del email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Por favor, ingrese un email válido');
-        return;
-    }
-    
-    // Simular envío del formulario
-    alert('¡Gracias por su mensaje! Nos pondremos en contacto pronto.');
-    this.reset();
+// Manejo del menú lateral en móvil
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.sidebar').classList.toggle('active');
 });
 
-// Animación suave al hacer scroll
+// Cerrar menú al hacer clic en un enlace (en móvil)
+document.querySelectorAll('.sidebar-menu a').forEach(link => {
+    link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            document.querySelector('.sidebar').classList.remove('active');
+        }
+    });
+});
+
+// Navegación suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const headerOffset = 60;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
         }
     });
 });
 
-// Animación de aparición al hacer scroll
-const observerOptions = {
-    threshold: 0.1
-};
+// Resaltar sección actual en el menú
+window.addEventListener('scroll', () => {
+    let current = '';
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.sidebar-menu a');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 150) {
+            current = section.getAttribute('id');
         }
     });
-}, observerOptions);
 
-// Observar elementos para animación
-document.querySelectorAll('.service-card, .about-content, .contact-form').forEach(el => {
-    el.classList.add('fade-in');
-    observer.observe(el);
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
+        }
+    });
 }); 

@@ -1,6 +1,6 @@
 # Landing Page
 
-Una landing page para práctica de propuesta didáctica
+Una landing page para práctica de propuesta didáctica para AEMI
 
 ## Tecnologías Utilizadas
 

@@ -3,83 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Moderna</title>
+    <title>Landing Page</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Logo</div>
-            <ul class="nav-links">
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+        <nav class="sidebar-menu">
+            <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+    </aside>
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Bienvenido a Nuestra Empresa</h1>
-            <p>Transformamos ideas en realidad digital</p>
-            <a href="#contacto" class="cta-button">Contáctanos</a>
-        </div>
-    </section>
-
-    <section id="servicios" class="services">
-        <h2>Nuestros Servicios</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Desarrollo Web</h3>
-                <p>Creamos sitios web modernos y responsivos</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Diseño Móvil</h3>
-                <p>Diseños adaptados para todos los dispositivos</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-paint-brush"></i>
-                <h3>Diseño UI/UX</h3>
-                <p>Interfaces intuitivas y experiencias únicas</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="nosotros" class="about">
-        <h2>Sobre Nosotros</h2>
-        <div class="about-content">
-            <p>Somos un equipo apasionado por crear soluciones digitales innovadoras. Nuestra misión es ayudar a las empresas a crecer en el mundo digital.</p>
-        </div>
-    </section>
-
-    <section id="contacto" class="contact">
-        <h2>Contáctanos</h2>
-        <div class="contact-container">
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <header>
+            <nav>
+                <a href="#" class="logo">Logo</a>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
+            </nav>
+        </header>
 
-    <footer>
-        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
-    </footer>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Bienvenido a Nuestra Empresa</h1>
+                <p>Transformamos ideas en realidad digital</p>
+                <a href="#contacto" class="cta-button">Contáctanos</a>
+            </div>
+        </section>
+
+        <section id="servicios" class="services">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Desarrollo Web</h3>
+                    <p>Creamos sitios web modernos y responsivos</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Diseño Móvil</h3>
+                    <p>Diseños adaptados para todos los dispositivos</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Diseño UI/UX</h3>
+                    <p>Interfaces intuitivas y experiencias únicas</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="about">
+            <h2>Sobre Nosotros</h2>
+            <div class="about-content">
+                <p>Somos un equipo apasionado por crear soluciones digitales innovadoras. Nuestra misión es ayudar a las empresas a crecer en el mundo digital.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <h2>Contáctanos</h2>
+            <div class="contact-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>

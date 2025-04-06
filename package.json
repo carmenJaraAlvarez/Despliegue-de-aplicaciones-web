@@ -1,0 +1,20 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "Landing page test suite",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "verbose": true,
+    "testMatch": [
+      "**/test/**/*.js"
+    ]
+  }
+}

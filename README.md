@@ -35,4 +35,4 @@ Las contribuciones son bienvenidas. Por favor, abre un issue para discutir los c
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles. 
+Este proyecto está bajo la Licencia  Creative Commons Reconocimiento Compartir igual 4.0- ver el archivo [LICENSE](LICENSE) para más detalles. 

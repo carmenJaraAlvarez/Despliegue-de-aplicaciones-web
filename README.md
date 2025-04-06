@@ -7,7 +7,7 @@ Una landing page para práctica de propuesta didáctica
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- Font Awesome (para iconos)
+- Font Awesome
 
 ## Estructura del Proyecto
 

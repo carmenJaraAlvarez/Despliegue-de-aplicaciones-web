@@ -1,5 +1,6 @@
 name: CI
 
+# Workflow for running tests
 on:
   push:
     branches: [ main, dev ]

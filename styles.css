@@ -122,12 +122,11 @@ section h2 {
 /* Hero section */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #3498db, #2c3e50);
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
     padding: 0 1rem;
     margin-top: 60px;
     margin-bottom: 0;
@@ -136,11 +135,28 @@ section h2 {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--title-green);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    color: var(--title-green);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #0077cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #005fa3;
 }
 
 /* Services section */
@@ -157,7 +173,7 @@ section h2 {
 
 .service-card {
     background: white;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
@@ -202,9 +218,7 @@ section h2 {
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    padding: 1rem;
 }
 
 .form-group {
@@ -247,11 +261,28 @@ section h2 {
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--text-dark);
-    color: white;
+    text-align: left;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: var(--text-dark);
     margin-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.license-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.license-footer img {
+    height: 31px;
+}
+
+.license-footer a {
+    color: inherit;
+    text-decoration: underline;
 }
 
 /* Títulos */
@@ -301,4 +332,59 @@ h2 {
     .menu-toggle {
         display: block;
     }
+}
+
+/* Contenedor con borde */
+.content-box {
+    border: 2px solid #0077cc;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Línea verde superior */
+.green-line {
+    border-top: 3px solid var(--title-green);
+    margin: 1rem 0;
+}
+
+/* Secciones */
+section {
+    padding: 2rem;
+}
+
+section > div {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Formulario */
+.contact-form {
+    padding: 1rem;
+}
+
+/* Cards de servicios */
+.service-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Secciones principales del menú */
+#inicio, #servicios, #nosotros, #contacto {
+    border: 2px solid #0077cc;
+    border-radius: 15px;
+    padding: 2rem;
+    background-color: white;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 } 
